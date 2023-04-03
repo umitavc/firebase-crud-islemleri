@@ -156,9 +156,9 @@ class _HomePageState extends State<HomePage> {
     {"kitapId": id,
      "kitapAd": ad, 
      "kitapKategori": kategori,
-      "kitapSayfaSayisi": sayfasayisi.toString()};
+     "kitapSayfaSayisi": sayfasayisi.toString()};
     veriYolu.set(kitaplar).whenComplete(() {
-      Fluttertoast.showToast(msg: id + "ıd numarali kitap eklendi");
+      Fluttertoast.showToast(msg: id + " Id numarali kitap eklendi");
     });
   }
 
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
   void veriSil() {
     DocumentReference veriSilmeYolu = FirebaseFirestore.instance.collection("kitaplik").doc(id);
     veriSilmeYolu.delete().whenComplete(() {
-      Fluttertoast.showToast(msg: id + "ıd numarali kitap silindi");
+      Fluttertoast.showToast(msg: id + " Id numarali kitap silindi");
     });
   }
 }
